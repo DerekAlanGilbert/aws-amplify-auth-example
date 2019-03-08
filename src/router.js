@@ -1,5 +1,5 @@
+import VueRouter from 'vue-router'
 import Vue from 'vue'
-import Router from 'vue-router'
 
 import Home from './components/Home'
 import Profile from './components/Profile'
@@ -13,7 +13,7 @@ const routes = [
   { path: '/profile', component: Profile, meta: { requiresAuth: true} }
 ]
 
-const router = new Router({
+const router = new VueRouter({
   routes
 })
 
@@ -35,4 +35,3 @@ router.beforeResolve((to, from, next) => {
 })
 
 export default router
-

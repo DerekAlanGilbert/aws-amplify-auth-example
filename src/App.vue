@@ -1,16 +1,16 @@
 <template>
   <div id='app'>
     <div  class='nav'>
-      <router-link tag="p" to="/">
+      <router-link tag="p" to="/" name="home">
         <a>Home</a>
       </router-link>
-      <router-link tag="p" to="/profile">
+      <router-link tag="p" to="/profile" name="Profile">
         <a>Profile</a>
       </router-link>
-      <router-link tag="p" to="/protected">
+      <router-link tag="p" to="/protected" name="protected">
         <a>Protected</a>
       </router-link>
-      <router-link tag="p" to="/auth" v-if="!signedIn">
+      <router-link tag="p" to="/auth" v-if="!signedIn" name="auth">
         <a>Sign Up / Sign In</a>
       </router-link>
     </div>
@@ -26,7 +26,6 @@ import { AmplifyEventBus } from 'aws-amplify-vue'
 import { Auth } from 'aws-amplify'
 
 export default {
-  name: 'app',
   data() {
     return {
       signedIn: false
