@@ -1,7 +1,7 @@
 <template>
-  <content-box>
+  <div class="auth">
     <amplify-authenticator></amplify-authenticator>
-  </content-box>
+  </div>
 </template>
 
 <script>
