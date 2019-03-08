@@ -1,23 +1,37 @@
 <template>
   <div id='app'>
-    <div  class='nav'>
-      <router-link tag="p" to="/" name="home">
-        <a>Home</a>
-      </router-link>
-      <router-link tag="p" to="/profile" name="Profile">
-        <a>Profile</a>
-      </router-link>
-      <router-link tag="p" to="/protected" name="protected">
-        <a>Protected</a>
-      </router-link>
-      <router-link tag="p" to="/auth" v-if="!signedIn" name="auth">
-        <a>Sign Up / Sign In</a>
-      </router-link>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#"><img src="@/assets/amplify.svg" class="ml-3" height="25"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <router-link class="nav-item" tag="li" to="/" name="home">
+              <a class="nav-link"> Home </a>
+              </router-link>
+              <router-link class="nav-item" tag="li" to="/profile" name="Profile">
+                <a class="nav-link"> Profile </a>
+              </router-link>
+            <router-link class="nav-item" tag="li" to="/protected" name="protected">
+              <a class="nav-link"> Protected </a>
+              </router-link>
+              <router-link class="nav-item" tag="li" to="/auth" v-if="!signedIn" name="auth">
+              <a class="nav-link"> Sign Up / Sign In </a>
+              </router-link>
+          </ul>
+        </div>
+      </div>
+          <div class='sign-out'>
+          <amplify-sign-out v-if="signedIn"></amplify-sign-out>
+        </div>
+    </nav>
+    <div class="container mt-4">
+      <router-view></router-view>
     </div>
-    <router-view></router-view>
-    <div class='sign-out'>
-      <amplify-sign-out v-if="signedIn"></amplify-sign-out>
-    </div>
+
+  
   </div>
 </template>
 
@@ -53,19 +67,8 @@ export default {
 </script>
 
 <style>
-.nav {
-  display: flex;
-}
-.nav p {
-  padding: 0px 30px 0px 0px;
-  font-size: 18px;
-  color: #000;
-}
-.nav p:hover {
-  opacity: .7;
-}
-.nav p a {
-  text-decoration: none;
+.router-link-exact-active .nav-link{
+  color:aqua;
 }
 .sign-out {
   width: 160px;
