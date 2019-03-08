@@ -1,6 +1,7 @@
-// src/components/Protected.vue
 <template>
-  <h1>Hello from protected route!</h1>
+  <content-box>
+    <h1>Hello from protected route!</h1>
+  </content-box>
 </template>
 
 <script>

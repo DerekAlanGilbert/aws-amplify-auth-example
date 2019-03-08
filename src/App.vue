@@ -30,8 +30,6 @@
     <div class="container mt-4">
       <router-view></router-view>
     </div>
-
-  
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-  <h1>Welcome, {{user.username}}</h1>
+  <content-box>
+    <h1>Welcome, {{user.username}}</h1>
+  </content-box>
 </template>
 
 <script>

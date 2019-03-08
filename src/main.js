@@ -3,6 +3,11 @@ import VueRouter from 'vue-router'
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import App from './App'
+import Content from '@/components/layouts/content'
+
+// layouts
+Vue.component('content-box', Content)
+
 
 import router from './router'
 import config from './aws-exports'
