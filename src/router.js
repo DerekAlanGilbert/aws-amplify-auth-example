@@ -1,25 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
 
-Vue.use(Router)
+import Home from './components/Home'
+import Profile from './components/Profile'
+import Auth from './components/Auth'
+import Protected from './components/Protected'
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
-  ]
+const routes = [
+  { path: '/', component: Home },
+  { path: '/auth', component: Auth },
+  { path: '/protected', component: Protected, meta: { requiresAuth: true} },
+  { path: '/profile', component: Profile, meta: { requiresAuth: true} }
+]
+
+const router = new Router({
+  routes
 })
+
+router.beforeResolve((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    let user;
+    Vue.prototype.$Amplify.Auth.currentAuthenticatedUser().then(data => {
+      if (data && data.signInUserSession) {
+        user = data;
+      }
+      next()
+    }).catch((e) => {
+      next({
+        path: '/auth'
+      });
+    });
+  }
+  next()
+})
+
+export default router
+
