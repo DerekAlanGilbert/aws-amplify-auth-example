@@ -65,9 +65,6 @@ export default {
 </script>
 
 <style>
-.router-link-exact-active .nav-link{
-  color:aqua;
-}
 .sign-out {
   width: 160px;
   margin: 0 auto;
