@@ -1,6 +1,8 @@
 <template>
   <content-box>
-    <h1>Welcome, {{user.username}}</h1>
+    <div slot="body">
+      <h1 class="card-title">Welcome, {{user.username}}</h1>      
+    </div>
   </content-box>
 </template>
 

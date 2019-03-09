@@ -1,6 +1,8 @@
 <template>
   <content-box>
-    <h1>Hello from protected route!</h1>
+    <div slot="body">
+      <h1>Hello from protected route!</h1>
+    </div>
   </content-box>
 </template>
 
