@@ -8,16 +8,16 @@
       <div class="container">
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-              <router-link class="nav-item" tag="li" to="/" name="home">
+              <router-link class="nav-item" tag="li" to="/">
               <a class="nav-link"> Home </a>
               </router-link>
-              <router-link class="nav-item" tag="li" to="/profile" name="Profile">
+              <router-link class="nav-item" tag="li" to="/profile">
                 <a class="nav-link"> Profile </a>
               </router-link>
-            <router-link class="nav-item" tag="li" to="/protected" name="protected">
+              <router-link class="nav-item" tag="li" to="/protected">
               <a class="nav-link"> Protected </a>
               </router-link>
-              <router-link class="nav-item" tag="li" to="/auth" v-if="!signedIn" name="auth">
+              <router-link class="nav-item" tag="li" to="/auth" v-if="!signedIn">
               <a class="nav-link"> Sign Up / Sign In </a>
               </router-link>
           </ul>

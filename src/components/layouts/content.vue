@@ -7,9 +7,6 @@
 </template>
 <script>
 export default {
-  data () {
-    
-  },
   props: ['customClasses']
 }
 </script>
