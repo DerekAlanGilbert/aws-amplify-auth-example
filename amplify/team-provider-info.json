@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "awsamplifyauthexampl-20190311073205-authRole",
+            "UnauthRoleArn": "arn:aws:iam::035746036990:role/awsamplifyauthexampl-20190311073205-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::035746036990:role/awsamplifyauthexampl-20190311073205-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "awsamplifyauthexampl-20190311073205-deployment",
+            "UnauthRoleName": "awsamplifyauthexampl-20190311073205-unauthRole",
+            "StackName": "awsamplifyauthexampl-20190311073205",
+            "StackId": "arn:aws:cloudformation:us-east-2:035746036990:stack/awsamplifyauthexampl-20190311073205/100f6ae0-4402-11e9-918a-02e473ddfb1a"
+        }
+    }
+}
