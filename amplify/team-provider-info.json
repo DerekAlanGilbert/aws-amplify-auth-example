@@ -9,6 +9,11 @@
             "UnauthRoleName": "awsamplifyauthexampl-20190311073205-unauthRole",
             "StackName": "awsamplifyauthexampl-20190311073205",
             "StackId": "arn:aws:cloudformation:us-east-2:035746036990:stack/awsamplifyauthexampl-20190311073205/100f6ae0-4402-11e9-918a-02e473ddfb1a"
+        },
+        "categories": {
+            "auth": {
+                "cognito6992e5cd": {}
+            }
         }
     }
 }
